@@ -10,12 +10,8 @@ const { createRecipe, setTimer, quit } = require("./recipes.js");
 
 // Array of Recipes
 const recipe = [
-  "Flour",
-  "Baking powder",
-  "Salt",
-  "Sugar",
-  "Soy milk",
-  "Oil"
+  "ingredient1",
+  "ingredient2"
 ];
 
 // Main function for the program
