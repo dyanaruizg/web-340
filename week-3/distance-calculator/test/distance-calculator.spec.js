@@ -24,7 +24,7 @@ function testVenusToNeptune() {
 // Function that tests the distance between Earth and Mars
 function testEarthToMars() {
   try {
-    assert.strictEqual(calculateDistance('earth', 'Mars'), "0.52");
+    assert.strictEqual(calculateDistance('Earth', 'Mars'), "0.52");
     return true;
   } catch (error) {
     console.error("Failed testEarthToMars: \n" + error.message);
