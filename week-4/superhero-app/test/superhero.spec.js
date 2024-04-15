@@ -17,15 +17,20 @@ const superhero = new SuperheroEmitter();
 // Function that test the performAction event
 function testPerformAction() {
   try {
+    // Declare an action result
+    let actionResult;
+
     // Listen for the performAction event
     superhero.on("action", (action) => {
+      actionResult = action;
       console.log(`Superhero performs action: ${action}`);
     });
-    assert.strictEqual(superhero.performAction("fly"), "fly");
-    console.log("Passed testPerformAction");
+    superhero.performAction("fly");
+    assert.strictEqual(actionResult, "fly");
+    console.log("Passed testPerformAction \n");
     return true;
   } catch (error) {
-    console.log("Failed testPerformAction: \n" + error.message);
+    console.log(`Failed testPerformAction: \n ${error.message}`);
     return false;
   }
 }
@@ -33,15 +38,20 @@ function testPerformAction() {
 // Function that test the encounterDanger event
 function testEncounterDanger() {
   try {
+    // Declare a danger result
+    let dangerResult;
+
     // Listen for the encounterDanger event
     superhero.on("danger", (danger) => {
+      dangerResult = danger;
       console.log(`Superhero encounters danger: ${danger}`);
     });
-    assert.strictEqual(superhero.encounterDanger("fire"), "fire");
-    console.log("Passed testEncounterDanger");
+    superhero.encounterDanger("fire");
+    assert.strictEqual(dangerResult, "fire");
+    console.log("Passed testEncounterDanger \n");
     return true;
   } catch (error) {
-    console.log("Failed testEncounterDanger: \n" + error.message);
+    console.log(`Failed testPerformAction: \n ${error.message}`);
     return false;
   }
 }
@@ -49,15 +59,20 @@ function testEncounterDanger() {
 // Function that test the helpSomeone event
 function testHelpSomeone() {
   try {
-    // Listen for the encounterDanger event
-    superhero.on("person", (person) => {
+    // Declare a person result
+    let personResult;
+
+    // Listen for the helpSomeone event
+    superhero.on("help", (person) => {
+      personResult = person;
       console.log(`Superhero helps: ${person}`);
     });
-    assert.strictEqual(superhero.helpSomeone("Mary Jane"), "Mary Jane");
-    console.log("Passed testHelpSomeone");
+    superhero.helpSomeone("Mary Jane");
+    assert.strictEqual(personResult, "Mary Jane");
+    console.log("Passed testHelpSomeone \n");
     return true;
   } catch (error) {
-    console.log("Failed testHelpSomeone: \n" + error.message);
+    console.log(`Failed testHelpSomeone: \n ${error.message}`);
     return false;
   }
 }
