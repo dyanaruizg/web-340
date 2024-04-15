@@ -24,6 +24,11 @@ function calculateDistance(planet1, planet2) {
   let planet2AU = distanceFromTheSun(planet2);
   let distance = planet2AU - planet1AU;
 
+  // Verify if the distance is negative 
+  if (distance < 0) {
+    distance *= -1;
+  }
+
   // Function that calculates the distance from the sun in AU
   function distanceFromTheSun(planet) {
     let astronomicalUnit = 0;
