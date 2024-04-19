@@ -1,0 +1,18 @@
+{
+  "name": "pie-baker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pie.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest pie.spec.js"
+  },
+  "keywords": [],
+  "author": "Diana Ruiz Garcia",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
