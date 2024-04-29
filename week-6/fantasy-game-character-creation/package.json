@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "test": "jest test/server.spec.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Diana Ruiz Garcia",
